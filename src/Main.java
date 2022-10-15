@@ -18,25 +18,25 @@ public class Main {
         boolean monatValide = false;
         boolean jahrValide = false;
 
-        if(pTag >= 1 && pTag <= 31) {
+        if (pTag >= 1 && pTag <= 31) {
             tagValide = true; // wenn Tag valide wird Variable true gesetzt
         }
-        if(pMonat >= 3 && pMonat <= 14) {
+        if (pMonat >= 3 && pMonat <= 14) {
             monatValide = true; // wenn Monat valide wird Variable true gesetzt
         }
-        if(jahrImJahrhundert >= 0 && jahrImJahrhundert <= 99) {
+        if (jahrImJahrhundert >= 0 && jahrImJahrhundert <= 99) {
             jahrValide = true; // wenn Jahr im Jahrhundert valide wird Variable true gesetzt
         }
 
 
         // wenn Datum valide, wird der Wochentag berechnet und ausgegeben
-        if(tagValide && monatValide && jahrValide) {
+        if (tagValide && monatValide && jahrValide) {
             
             // Berechnung des Wochentags
             wochentag = (pTag + 26 * (pMonat + 1) / 10 + 5 * jahrImJahrhundert / 4 + jahrhundert / 4 + 5 * jahrhundert - 1) % 7;
 
             // Zuordnung vom berechneten Wochentag zur passenden Ausgabe
-            switch(wochentag) {
+            switch (wochentag) {
                 case 0:
                     System.out.println("Wochentag: Sonntag");
                     break;
@@ -67,9 +67,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // Deklaration eines validen Datums
-        int tag = 6;
-        int monat = 1;
+        // Datum zur Berechnung des Wochentags
+        int tag = 15;
+        int monat = 10;
         int jahr = 2022;
 
         berechneWochentag(tag, monat, jahr); // Aufruf der Methode berechneWochentage mit Datum als Parameter
