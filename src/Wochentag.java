@@ -1,4 +1,4 @@
-public class Main {
+public class Wochentag {
 
     // Methode zum Berechnen eines Wochentages
     static void berechneWochentag(int pTag, int pMonat, int pJahr) {
@@ -68,7 +68,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Datum zur Berechnung des Wochentags
-        int tag = 15;
+        int tag = 6;
         int monat = 10;
         int jahr = 2022;
 
